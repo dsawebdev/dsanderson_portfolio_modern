@@ -77,7 +77,7 @@ gulp.task('serve', ['inject'], function () {
   return gulp.src(paths.tmp)
     .pipe(webserver({
       port: 4200,
-      livereload: {auto: false}, 
+      livereload: true, 
       open: true
     }));
 });

@@ -1,21 +1,21 @@
 {
-  "name": "gulpenv",
+  "name": "dsanderson_portfolio_modern",
   "version": "1.0.0",
-  "description": "Gulp Enviornment",
+  "description": "DSA Portfolio",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dsawebdev/gulpEnv.git"
+    "url": "git+https://github.com/dsawebdev/dsanderson_portfolio_modern.git"
   },
   "author": "Devon Anderson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dsawebdev/gulpEnv/issues"
+    "url": "https://github.com/dsawebdev/dsanderson_portfolio_modern/issues"
   },
-  "homepage": "https://github.com/dsawebdev/gulpEnv#readme",
+  "homepage": "https://github.com/dsawebdev/dsanderson_portfolio_modern#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",

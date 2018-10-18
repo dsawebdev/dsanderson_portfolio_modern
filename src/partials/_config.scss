@@ -1,4 +1,4 @@
-$primary-color: #4b6584;
+$primary-color: #125E8A;
 $secondary-color: #F49E4C;
 $show-home-image: true;
 $home-image: url(../img/lion-portfolio-background.jpg);
@@ -52,7 +52,7 @@ $background-opacity: 0.4s;
 }
 
 @mixin mediaLg {
-  @media screen and (max-width: 769px) and (max-wdith: 1170px) {
+  @media screen and (min-width: 770px) and (max-width: 1170px) {
     @content;
   }
 }

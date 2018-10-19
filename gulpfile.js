@@ -27,7 +27,7 @@ var paths = {
   tmpIMG: 'tmp/img/**/*',
 
   dist: 'dist',
-  distIndex: 'dist/index.html',
+  distIndex: 'src/**/*.html',
   distCSS: 'dist/**/*.css',
   distJS: 'dist/**/*.js'
 }

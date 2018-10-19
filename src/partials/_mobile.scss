@@ -186,7 +186,6 @@
     .menu-nav {
       height: 75vh;
       transform: translate3d(-100%, 0, 0);
-      font-size: 24px;
     }
 
     .menu-branding {
@@ -296,6 +295,10 @@
   .menu-nav {
     height: 50vh;
     transform: translate3d(-100%, 0, 0);
+
+    .nav-link{
+      font-size: 24px;
+    }
   }
 
   .menu-branding {

@@ -1,0 +1,494 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.6s ease-out; }
+  .menu-btn .btn-line {
+    width: 35px;
+    height: 4px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.6s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #0e486a;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.6s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #0f4f73;
+    transition: all 0.6s ease-out;
+    transform: translate3d(0, 100%, 0); }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 300px;
+      height: 300px;
+      background: url("../img/dsa_falcons.jpg") no-repeat;
+      background-size: 300px 300px;
+      border-radius: 50%;
+      border: 4px solid #F49E4C; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.6s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #F49E4C; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.6s ease-out; }
+    .menu .nav-link:hover {
+      color: #F49E4C; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #125E8A;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/lion-portfolio-background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(18, 94, 138, 0.4); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(13, 69, 102, 0.5);
+    max-width: 100%; }
+  h1.sm-heading-1,
+  h2.sm-heading-1,
+  h3.sm-heading-1 {
+    max-width: 60%; }
+  h1 strong,
+  h2 strong,
+  h3 strong {
+    font-family: 'Noto Serif JP', sans-serif;
+    font-size: 2rem; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #F49E4C; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #F49E4C;
+        transition: all 0.6s ease-out; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job2";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    grid-area: bioimage;
+    border-radius: 50%;
+    border: #F49E4C 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+    .about-info .bio h3 {
+      font-size: 2rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+
+.skill-set ul {
+  list-style: none;
+  perspective: 1000px; }
+
+.skill-set ul li {
+  display: grid;
+  grid-template-columns: 30% auto;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transform: rotateY(-30deg) rotateX(15deg);
+  position: absolute;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2); }
+
+.skill-set ul li:nth-child(1) {
+  background: #bfe8fc;
+  top: -30px;
+  z-index: 2; }
+
+.skill-set ul li:nth-child(2) {
+  background: #74aeca;
+  z-index: 1; }
+
+.skill-set ul li:nth-child(3) {
+  background: #31434d;
+  top: 30px; }
+
+.job {
+  background: #156da1;
+  padding: 0.5rem;
+  border-bottom: 5px solid #F49E4C; }
+
+.projects {
+  display: grid;
+  grid-gap: 0.2rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    max-height: 300px;
+    height: 100%; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #F49E4C;
+      transition: all 0.6s ease-out; }
+
+form {
+  width: 600px; }
+  form .label {
+    color: #F49E4C; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  text-align: center; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #F49E4C;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #a7d8f4;
+  color: #333; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0c3f5d;
+  color: #fff;
+  height: 60px; }
+
+.skill-icons img {
+  margin-right: 30px; }
+
+.skill-icons .ang {
+  height: 96px;
+  width: 96px; }
+
+.skill-icons .xd-icon {
+  height: 92px;
+  width: 92px; }
+
+.small-logo-image {
+  width: 100%;
+  height: 100%;
+  display: none; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 2rem;
+    font-size: 5rem; } }
+
+@media screen and (min-width: 770px) and (max-width: 1170px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main#home {
+      overflow: hidden; }
+      main#home h1 {
+        margin-top: 10vh; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 4rem;
+      font-size: 8rem; }
+    main .sm-heading {
+      margin: 0 auto;
+      font-size: 3rem;
+      margin-bottom: 2rem; }
+    main .icons i {
+      font-size: 5rem;
+      margin-right: 10px;
+      margin-bottom: 1rem; }
+    main .small-logo-image {
+      display: block;
+      margin: auto;
+      height: 40%;
+      width: 40%; }
+    main ul.menu-nav,
+    main div.menu-branding {
+      float: none;
+      width: 100%;
+      min-height: 0; }
+      main ul.menu-nav.show,
+      main div.menu-branding.show {
+        transform: translate3d(0, 0, 0); }
+    main .menu-nav {
+      height: 75vh;
+      transform: translate3d(-100%, 0, 0); }
+    main .nav-link {
+      font-size: 3rem; }
+    main .menu-branding {
+      height: 25vh;
+      transform: translate3d(100%, 0, 0); }
+    main .portrait {
+      height: 200px;
+      width: 200px; }
+    main .about-info {
+      grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+      grid-template-columns: 1fr; }
+      main .about-info .bio {
+        font-size: 2rem; }
+        main .about-info .bio h3 {
+          font-size: 4rem; }
+        main .about-info .bio h1 {
+          font-size: 2.75rem; }
+        main .about-info .bio img {
+          height: 40%;
+          width: 40%;
+          margin: 0; }
+        main .about-info .bio .skill-icons img {
+          height: 20%;
+          width: 20%; }
+    main .projects {
+      grid-template-columns: repeat(2, 1fr); }
+  #contact {
+    align-items: center;
+    text-align: center; }
+    #contact .sm-heading .is-size-4 {
+      margin-bottom: 2px; }
+    #contact form {
+      width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main#home {
+      overflow: hidden; }
+      main#home h1 {
+        margin-top: 0vh; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 4rem;
+      font-size: 6rem; }
+    main .sm-heading {
+      margin: 0 auto;
+      font-size: 2.5rem;
+      margin-bottom: 2rem; }
+    main .icons i {
+      font-size: 4rem;
+      margin-right: 5px;
+      margin-bottom: 1rem; }
+    main .small-logo-image {
+      display: block;
+      margin: auto;
+      height: 40%;
+      width: 40%; }
+    main ul.menu-nav,
+    main div.menu-branding {
+      float: none;
+      width: 100%;
+      min-height: 0; }
+      main ul.menu-nav.show,
+      main div.menu-branding.show {
+        transform: translate3d(0, 0, 0); }
+    main .menu-nav {
+      height: 75vh;
+      transform: translate3d(-100%, 0, 0); }
+    main .menu-branding {
+      height: 25vh;
+      transform: translate3d(100%, 0, 0); }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+    .about-info .bio {
+      font-size: 1.5rem; }
+      .about-info .bio h3 {
+        font-size: 3rem; }
+      .about-info .bio h1 {
+        font-size: 2.5rem; }
+      .about-info .bio img {
+        height: 40%;
+        width: 40%;
+        margin: 0; }
+      .about-info .bio .skill-icons img {
+        height: 20%;
+        width: 20%; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main#home {
+      overflow: hidden; }
+      main#home h1 {
+        margin-top: 0vh; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 2.75rem; }
+    main .sm-heading {
+      margin: 0 auto;
+      font-size: 1.5rem; }
+    main .icons a i {
+      font-size: 1.75rem;
+      margin-bottom: .5rem; }
+    main .small-logo-image {
+      display: block;
+      margin: auto;
+      height: 60%;
+      width: 60%; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    ul.menu-nav .portrait,
+    div.menu-branding .portrait {
+      height: 150px;
+      width: 150px;
+      border: #F49E4C 3px solid;
+      background-size: 150px 150px;
+      background: url("../img/dsa_falcons_xs_small.jpg") no repeat; }
+  .menu-nav {
+    height: 50vh;
+    transform: translate3d(-100%, 0, 0); }
+    .menu-nav .nav-link {
+      font-size: 24px; }
+  .menu-branding {
+    height: 50vh;
+    transform: translate3d(100%, 0, 0); }
+  #about h2 {
+    margin-bottom: 5px; }
+  #about .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3"; }
+    #about .about-info .bio-image {
+      margin: auto;
+      height: 150px;
+      width: 150px;
+      grid-area: bioimage;
+      border-radius: 50%;
+      border: #F49E4C 3px solid; }
+    #about .about-info .bio {
+      font-size: 1.25rem; }
+      #about .about-info .bio h1 {
+        font-size: 1.5rem; }
+      #about .about-info .bio img {
+        height: 40%;
+        width: 40%;
+        margin: 0; }
+  #about .projects {
+    display: grid;
+    grid-template-columns: 1fr; }
+  #contact {
+    align-items: center;
+    text-align: center; }
+    #contact .sm-heading .is-size-4 {
+      margin-bottom: 2px; }
+    #contact form {
+      width: 100%; } }

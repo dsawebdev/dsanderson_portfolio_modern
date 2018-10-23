@@ -29,8 +29,6 @@
     "gulp-inject": "^4.3.2",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1",
-    "gulp-util": "^3.0.8",
-    "gulp-webserver": "^0.9.1",
-    "pump": "^3.0.0"
+    "gulp-webserver": "^0.9.1"
   }
 }

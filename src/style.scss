@@ -1,6 +1,5 @@
 @import "./partials/config";
 @import "./partials/menu";
-@import "./partials/mobile";
 
 //Box sizing for the pages that I am not using grid system
 * {
@@ -79,7 +78,6 @@ main {
 
     a {
       padding: 0.4rem;
-      margin-left: 1rem;
       color: #fff;
       text-decoration: none;
 
@@ -246,7 +244,7 @@ form{
   display: none;
 }
 
-//Overlay
+@import "./partials/mobile";
 
 
 

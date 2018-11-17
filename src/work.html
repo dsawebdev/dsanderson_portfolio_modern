@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <!--[htmlclean-protect]-->
   <!-- inject:css -->
   <!-- endinject -->
@@ -67,12 +71,15 @@
         <div class="projects">
             <div class="item">
                 <a href="#!">
-                    <img src="./img/projects/placeholder-1.jpg" alt="Project 1">
+                    <img src="./img/projects/thumbnails/thumbnail1.jpg" alt="Project 1">
                 </a>
-                <a href="#" class="btn-light">
+                <a href="./img/projects/gifs/project1.gif" class="btn-dark gifImage" data-fancybox>
+                    <i class="fas fa-eye">Quick Look</i>
+                </a>
+                <a href="https://trusting-sammet-9400d8.netlify.com/" class="btn-light" target="_blank">
                     <i class="fas fa-eye">Project</i>
                 </a>
-                <a href="#" class="btn-dark">
+                <a href="https://github.com/dsawebdev/dsanderson-portfolio" class="btn-dark" target="_blank">
                     <i class="fab fa-github">Github</i>
                 </a>
             </div>
@@ -125,6 +132,12 @@
   <!-- inject:js -->
   <!-- endinject -->
   <!--[/htmlclean-protect]-->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("[data-fancybox]").fancybox();
+    }
+</script>
 </body>
 
 </html>

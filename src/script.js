@@ -33,3 +33,5 @@ function toggleMenu() {
   }
 }
 
+$("[data-fancybox]").fancybox();
+

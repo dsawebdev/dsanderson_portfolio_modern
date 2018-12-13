@@ -132,12 +132,32 @@ main {
     border-bottom: 5px solid $secondary-color;
   }
 
+  //? Skill Icons
   .skill-icons{
-    img{
-      margin-right: 30px;
-      max-width: 80px;
-      max-height: 80px;
+    a{
+      text-decoration: none;
+      img{
+        margin-right: 30px;
+        max-width: 80px;
+        max-height: 80px;
+      
+        &:hover{
+          max-width: 60px;
+          max-height: 60px;
+          @include easeOut();
+        }
+      }
+      #react {
+        max-width: 110px;
+        max-height: 110px;
+
+        &:hover{
+          max-width: 80px;
+          max-height: 80px;
+        }
+      }
     }
+    
   }
 }
 
